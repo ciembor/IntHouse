@@ -1,3 +1,5 @@
 .settings
 .project
-.pydevoroject
+.pydevproject
+lib/*
+img/*
