@@ -1,0 +1,4 @@
+AuthUserFile /home/ciembor/.htpasswd
+AuthName "IntHouse"
+AuthType Basic
+require valid-user
