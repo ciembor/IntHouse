@@ -1,0 +1,66 @@
+<!doctype html>
+
+  <head>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>IntHouse</title>
+    
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/css/cupertino/jquery-ui-1.8.19.custom.css" rel="stylesheet" />
+    
+    <link href="css/main.css" rel="stylesheet" />
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/js/jquery-ui-1.8.19.custom.min.js"></script>
+    
+    <script type="text/javascript" src="js/templates.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    
+  </head>
+  
+  <body>
+    
+    <div id="container">
+      
+      <div class="modal" id="temp-modal">
+        <div class="modal-body">
+           <div id="temp-slider"></div>
+        </div>
+        <div class="modal-footer">
+          <a href="#" class="btn btn-success">OK</a>
+          <a href="#" class="btn cancel">Anuluj</a>
+          <span class="val mval">20</span><span class="mval">°C</span>
+        </div>
+      </div>
+      
+      <div class="modal" id="hum-modal">
+        <div class="modal-body">
+          <div id="hum-slider"></div>
+        </div>
+        <div class="modal-footer">
+          <span class="val mval">50</span><span class="mval">%</span>
+          <a href="#" class="btn btn-success">OK</a>
+          <a href="#" class="btn cancel">Anuluj</a>
+        </div>
+      </div>
+      
+      <div id="controler">
+        <ul id="floors" class="nav nav-pills">
+          <li id="parter" class="active"><a href="#">parter</a></li>
+          <li id="pierwsze"><a href="#">1-sze piętro</a></li>
+        </ul>
+        <ul id="views" class="nav nav-pills">
+          <li id="temperature" class="active"><a href="#">temperatura</a></li>
+          <li id="humidity"><a href="#">wilgotność</a></li>
+          <li id="objects"><a href="#">obiekty</a></li>
+          <li id="notifications"><a href="#">bezpieczeństwo</a></li>
+        </ul>
+      </div>
+      <div id="view">
+      </div>
+    </div>
+    
+  </body>
+  
+</html>

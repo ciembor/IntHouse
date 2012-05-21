@@ -1,0 +1,95 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <xsd:element name="building" type="buildingType"/>
+  
+  <xsd:complexType name="buildingType">
+    <xsd:sequence>
+      <xsd:element name="alarm" type="xsd:boolean" default="false"/>
+      <xsd:element name="floor" type="floorType" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="floorType">
+    <xsd:sequence> 
+      <xsd:element name="plan" type="xsd:string"/>
+      <xsd:element name="room" type="roomType" minOccurs="1" maxOccurs="unbounded"/>
+    </xsd:sequence>
+    <xsd:attribute name="id" type="xsd:string" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="roomType">
+    <xsd:sequence> 
+      
+      <xsd:element name="temperature"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:positiveInteger"> 
+            <xsd:minExclusive value="10"/> 
+            <xsd:maxExclusive value="30"/> 
+          </xsd:restriction> 
+        </xsd:simpleType>
+      </xsd:element>
+      
+      <xsd:element name="humidity"> 
+        <xsd:simpleType> 
+          <xsd:restriction base="xsd:positiveInteger"> 
+            <xsd:minExclusive value="25"/> 
+            <xsd:maxExclusive value="75"/> 
+          </xsd:restriction> 
+        </xsd:simpleType>
+      </xsd:element>
+      
+      <xsd:element name="notifications" type="notificationsType"/>
+      <xsd:element name="objects" type="objectsType"/>
+      
+    </xsd:sequence>
+    <xsd:attribute name="name" type="xsd:string" use="required"/>
+    <xsd:attribute name="x" type="xsd:integer" use="required"/>
+    <xsd:attribute name="y" type="xsd:integer" use="required"/>
+  </xsd:complexType>
+
+  <xsd:complexType name="notificationsType">
+    <xsd:sequence>
+      <xsd:element name="burglary" type="xsd:boolean" default="false"/>
+      <xsd:element name="fire" type="xsd:boolean" default="false"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="objectsType">
+    <xsd:sequence>
+      <xsd:sequence>
+        <xsd:element name="light" type="lightType" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+      <xsd:sequence>
+        <xsd:element name="wifi" type="wifiType" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:simpleType name="switchType">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="on"/>
+      <xsd:enumeration value="off"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  
+  <xsd:complexType name="lightType">
+    <xsd:simpleContent>
+      <xsd:extension base="switchType">
+        <xsd:attribute name="index" type="xsd:int"  use="required"/>
+        <xsd:attribute name="x" type="xsd:int"  use="required"/>
+        <xsd:attribute name="y" type="xsd:int"  use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  
+  <xsd:complexType name="wifiType">
+    <xsd:simpleContent>
+      <xsd:extension base="switchType">
+        <xsd:attribute name="index" type="xsd:int"  use="required"/>
+        <xsd:attribute name="x" type="xsd:int"  use="required"/>
+        <xsd:attribute name="y" type="xsd:int"  use="required"/>
+      </xsd:extension>
+    </xsd:simpleContent>
+  </xsd:complexType>
+  
+</xsd:schema>

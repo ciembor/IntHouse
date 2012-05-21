@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='utf-8'?>
+<building>
+
+  <alarm>false</alarm>
+
+  <floor id="parter">
+    
+    <plan>parter.png</plan>
+    
+    <room name="sien" x="140" y="150">
+      <temperature>18</temperature>
+      <humidity>54</humidity>
+      <notifications>
+        <burglary>false</burglary>
+        <fire>false</fire>
+      </notifications>
+      <objects>
+        <light index="1" x="150" y="180">on</light>
+        <light index="2" x="42" y="315">off</light>
+      </objects>
+    </room>
+    
+    <room name="goscinny" x="540" y="185">
+      <temperature>20</temperature>
+      <humidity>48</humidity>
+      <notifications>
+        <burglary>false</burglary>
+        <fire>false</fire>
+      </notifications>
+      <objects>
+        <light index="1" x="550" y="185">off</light>
+        <wifi index="2" x="358" y="335">on</wifi>
+      </objects>
+    </room>
+    
+    <room name="korytarz" x="160" y="520">
+      <temperature>19</temperature>
+      <humidity>50</humidity>
+      <notifications>
+        <burglary>true</burglary>
+        <fire>false</fire>
+      </notifications>
+      <objects>
+        <light index="1" x="160" y="520">off</light>
+      </objects>
+    </room>
+    
+    <room name="kuchnia" x="530" y="520">
+      <temperature>21</temperature>
+      <humidity>58</humidity>
+      <notifications>
+        <burglary>false</burglary>
+        <fire>false</fire>
+      </notifications>
+      <objects>
+        <light index="1" x="540" y="510">on</light>
+      </objects>
+    </room>
+    
+  </floor>
+  
+  <floor id="pierwsze">
+    
+    <plan>pierwsze.png</plan>
+    
+    <room name="sypialnia1" x="130" y="90">
+      <temperature>22</temperature>
+      <humidity>50</humidity>
+      <notifications>
+        <burglary>false</burglary>
+        <fire>false</fire>
+      </notifications>
+      <objects>
+        <light index="1" x="150" y="80">off</light>
+      </objects>
+    </room>
+    
+    <room name="pracownia" x="560" y="180">
+      <temperature>22</temperature>
+      <humidity>50</humidity>
+      <notifications>
+        <burglary>true</burglary>
+        <fire>true</fire>
+      </notifications>
+      <objects>
+        <light index="1" x="560" y="180">off</light>
+        <light index="2" x="635" y="25">on</light>
+      </objects>
+    </room>
+    
+    <room name="korytarz" x="190" y="280">
+      <temperature>22</temperature>
+      <humidity>50</humidity>
+      <notifications>
+        <burglary>true</burglary>
+        <fire>false</fire>
+      </notifications>
+      <objects>
+        <light index="1" x="200" y="270">off</light>
+        <wifi index="2" x="400" y="210">on</wifi>
+      </objects>
+    </room>
+    
+    <room name="sypialnia2" x="160" y="520">
+      <temperature>22</temperature>
+      <humidity>50</humidity>
+      <notifications>
+        <burglary>false</burglary>
+        <fire>false</fire>
+      </notifications>
+      <objects>
+        <light index="2" x="160" y="510">on</light>
+      </objects>
+    </room>
+    
+    <room name="sypialnia3" x="600" y="520">
+      <temperature>22</temperature>
+      <humidity>50</humidity>
+      <notifications>
+        <burglary>false</burglary>
+        <fire>false</fire>
+      </notifications>
+      <objects>
+        <light index="1" x="600" y="510">off</light>
+      </objects>
+    </room>
+    
+  </floor>
+
+</building>

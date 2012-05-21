@@ -1,0 +1,56 @@
+body {
+  background-color: #eee;
+}
+
+a, a:hover, a:active, a:link {
+  outline: 0;
+}
+
+#view a {
+  text-decoration: none;
+}
+
+#container {
+  padding-top: 10px;
+  width: 925px;
+  margin: 0 auto;
+  background-color: #fff;
+  height: 100%;
+}
+
+#view {
+  width: 925px;
+  height: 691px;
+}
+
+#controler {
+  margin: 0 10px 0px 10px;
+  height: 34px;
+  display: block;
+}
+
+#views {
+  float: right;
+}
+
+#floors {
+  float: left;
+}
+
+.temperature, .humidity {
+  font-size: 36px;
+}
+
+.transparent {
+  opacity: 0.5;
+}
+
+.modal {
+  display: none;
+}
+
+.mval {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 24px;
+}
